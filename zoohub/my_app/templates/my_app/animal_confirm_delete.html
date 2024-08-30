@@ -1,0 +1,17 @@
+{% extends 'base.html' %}  
+{% load static %} 
+{% block content %}
+
+<div class="page-header">
+  <h1>Delete Animal?</h1>
+</div>
+
+<h2>Are you sure you want to delete {{ cat.name }}?</h2>
+
+<form action="" method="post" class="form">
+  {% csrf_token %}
+  <a href="{% url 'animal-detail' animal.id %}" class="btn secondary" style="color:blue;">Cancel</a>
+  <button type="submit" class="btn danger">Yes - Delete!</button>
+</form>
+
+{% endblock %}

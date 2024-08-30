@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <title>Zoo Hub</title>
+    {% block head %}
+    {% endblock %}
+    <header>
+        <div class="header-logo-container">
+            <a href="/">
+                <img src="{% static 'images/zoohub-logo.png' %}" alt="zoohub logo"/>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'animal-index' %}">All Animals</a></li>
+                    <li><a href="{% url 'animal-create' %}">New Animal</a></li>
+                    <li>
+                        <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+                            {% csrf_token %}
+                            <button type="submit">Log out</button>
+                        </form>
+                    </li>
+                {% else %}
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+    </main>
+</body>
+
+</html>

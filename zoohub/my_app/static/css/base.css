@@ -1,0 +1,37 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(17, 111, 165);;
+    padding: 25px; 
+}
+
+.header-logo-container {
+    width: 100px;
+    height: 100px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 500px;
+    list-style-type: none;
+    font-size: 18px;
+}
+
+li {
+    background-color: rgb(195, 99, 64);
+    padding: 20px; 
+    border-radius: 5px; 
+}
+
+a {
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+} 
+

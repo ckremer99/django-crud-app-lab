@@ -1,0 +1,29 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card a {
+    display: block;
+    text-decoration: none; /* Remove the default underline */
+    color: inherit; /* Ensure the text color is not affected */
+}
+
+.card {
+    border-style: solid;
+    border-width: 2px; 
+    border-radius: 5px; 
+    border-color: black;
+    width: 200px;
+    margin: 10px;
+}
+
+.card-img-container {
+    width: 200px; 
+    height: 200px; 
+}
+
+img {
+    width: 100em;
+    height: 100em;
+}
